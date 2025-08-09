@@ -1,11 +1,18 @@
-import "bootstrap";
-import "./style.css";
+let pronoun = ['the', 'our'];
+let adj = ['great', 'big'];
+let noun = ['jogger', 'racoon'];
 
+let sentence = ''
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+function getAllMixArr(firstPart, secondPart, threePart){
+    for(const first of firstPart){
+        for(const second of secondPart){
+            for(const three of threePart){
+                sentence = `${first}${second}${three}.com`
+                console.log(sentence)
+            }
+        }
+    }
+}
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+getAllMixArr(pronoun,adj,noun)
